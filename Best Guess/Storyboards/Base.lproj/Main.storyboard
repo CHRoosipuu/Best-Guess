@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="106" y="126"/>
         </scene>
-        <!--Guesses-->
+        <!--Answer-->
         <scene sceneID="wFf-CW-2lE">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gdY-YS-KJw" customClass="ViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gdY-YS-KJw" customClass="AnswerViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5oN-dj-fIV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,8 +62,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIH-m2-coA">
-                                <rect key="frame" x="164" y="97" width="87" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIH-m2-coA">
+                                <rect key="frame" x="146" y="97" width="123" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -73,7 +73,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uwy-aH-56r"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Guesses" id="HSN-qP-jhi">
+                    <navigationItem key="navigationItem" title="Answer" id="HSN-qP-jhi">
                         <barButtonItem key="rightBarButtonItem" title="Show Winner" style="done" id="2FM-T8-HJM">
                             <connections>
                                 <segue destination="87H-TA-HWG" kind="show" id="6fu-H4-LA4"/>
@@ -83,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFI-Yi-Wz2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844.9275362318845" y="125.89285714285714"/>
+            <point key="canvasLocation" x="2374" y="126"/>
         </scene>
         <!--Take A Guess-->
         <scene sceneID="VXY-Vy-S1m">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="WqA-ml-4yK" customClass="ViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="WqA-ml-4yK" customClass="TakeAGuessViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ZH-GK-npZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qr8-Eo-Eit" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="126"/>
+            <point key="canvasLocation" x="1632" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O57-65-7lc">
@@ -152,12 +152,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6M-K2-E2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1003" y="126"/>
+            <point key="canvasLocation" x="862" y="126"/>
         </scene>
         <!--Results-->
         <scene sceneID="hAJ-yN-y1P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="87H-TA-HWG" customClass="ViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="87H-TA-HWG" customClass="ResultsViewController" customModule="Best_Guess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fcn-us-NU6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrB-Ix-wrE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3654" y="126"/>
+            <point key="canvasLocation" x="3112" y="126"/>
         </scene>
     </scenes>
 </document>

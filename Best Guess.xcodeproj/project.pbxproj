@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		8999DEA123AD290C00F26FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEA023AD290C00F26FBC /* AppDelegate.swift */; };
 		8999DEA323AD290C00F26FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEA223AD290C00F26FBC /* SceneDelegate.swift */; };
-		8999DEA523AD290C00F26FBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEA423AD290C00F26FBC /* ViewController.swift */; };
+		8999DEA523AD290C00F26FBC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEA423AD290C00F26FBC /* StartViewController.swift */; };
 		8999DEA823AD290C00F26FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8999DEA623AD290C00F26FBC /* Main.storyboard */; };
 		8999DEAA23AD290E00F26FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8999DEA923AD290E00F26FBC /* Assets.xcassets */; };
 		8999DEAD23AD290E00F26FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8999DEAB23AD290E00F26FBC /* LaunchScreen.storyboard */; };
+		8999DEB823AD2FD600F26FBC /* TakeAGuessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEB723AD2FD600F26FBC /* TakeAGuessViewController.swift */; };
+		8999DEBA23AD304000F26FBC /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEB923AD304000F26FBC /* AnswerViewController.swift */; };
+		8999DEBC23AD30FA00F26FBC /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEBB23AD30FA00F26FBC /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8999DE9D23AD290C00F26FBC /* Best Guess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Guess.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8999DEA023AD290C00F26FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8999DEA223AD290C00F26FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8999DEA423AD290C00F26FBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8999DEA423AD290C00F26FBC /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8999DEA723AD290C00F26FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8999DEA923AD290E00F26FBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8999DEAC23AD290E00F26FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8999DEAE23AD290E00F26FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8999DEB723AD2FD600F26FBC /* TakeAGuessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAGuessViewController.swift; sourceTree = "<group>"; };
+		8999DEB923AD304000F26FBC /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		8999DEBB23AD30FA00F26FBC /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		8999DE9F23AD290C00F26FBC /* Best Guess */ = {
 			isa = PBXGroup;
 			children = (
-				8999DEA023AD290C00F26FBC /* AppDelegate.swift */,
-				8999DEA223AD290C00F26FBC /* SceneDelegate.swift */,
-				8999DEA423AD290C00F26FBC /* ViewController.swift */,
-				8999DEA623AD290C00F26FBC /* Main.storyboard */,
+				8999DEB523AD2F1D00F26FBC /* Delegates */,
+				8999DEB423AD2F0900F26FBC /* ViewControllers */,
+				8999DEB623AD2F2D00F26FBC /* Storyboards */,
 				8999DEA923AD290E00F26FBC /* Assets.xcassets */,
-				8999DEAB23AD290E00F26FBC /* LaunchScreen.storyboard */,
 				8999DEAE23AD290E00F26FBC /* Info.plist */,
 			);
 			path = "Best Guess";
+			sourceTree = "<group>";
+		};
+		8999DEB423AD2F0900F26FBC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8999DEA423AD290C00F26FBC /* StartViewController.swift */,
+				8999DEB723AD2FD600F26FBC /* TakeAGuessViewController.swift */,
+				8999DEB923AD304000F26FBC /* AnswerViewController.swift */,
+				8999DEBB23AD30FA00F26FBC /* ResultsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8999DEB523AD2F1D00F26FBC /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8999DEA023AD290C00F26FBC /* AppDelegate.swift */,
+				8999DEA223AD290C00F26FBC /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8999DEB623AD2F2D00F26FBC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8999DEA623AD290C00F26FBC /* Main.storyboard */,
+				8999DEAB23AD290E00F26FBC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8999DEA523AD290C00F26FBC /* ViewController.swift in Sources */,
+				8999DEA523AD290C00F26FBC /* StartViewController.swift in Sources */,
+				8999DEB823AD2FD600F26FBC /* TakeAGuessViewController.swift in Sources */,
+				8999DEBA23AD304000F26FBC /* AnswerViewController.swift in Sources */,
 				8999DEA123AD290C00F26FBC /* AppDelegate.swift in Sources */,
 				8999DEA323AD290C00F26FBC /* SceneDelegate.swift in Sources */,
+				8999DEBC23AD30FA00F26FBC /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
