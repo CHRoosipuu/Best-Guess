@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ka-hK-SVP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="best_guess_icon_nobg" translatesAutoresizingMaskIntoConstraints="NO" id="6ka-hK-SVP">
                                 <rect key="frame" x="87" y="44" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -215,4 +215,7 @@
             <point key="canvasLocation" x="3112" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="best_guess_icon_nobg" width="1024" height="1024"/>
+    </resources>
 </document>
