@@ -9,6 +9,11 @@
 import UIKit
 
 class TakeAGuessViewController: UIViewController {
+    
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

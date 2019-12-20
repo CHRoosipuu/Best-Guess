@@ -12,6 +12,8 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     
+    @IBAction func unwindToStartView(segue:UIStoryboardSegue) { }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

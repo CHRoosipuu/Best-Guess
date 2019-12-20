@@ -149,6 +149,10 @@
                     <navigationItem key="navigationItem" title="Take A Guess" id="ti0-ev-w5v">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="dOO-XU-9Bg">
                             <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="WqA-ml-4yK" id="BT4-E9-0cq"/>
+                                <segue destination="YUJ-6r-pGF" kind="unwind" unwindAction="unwindToStartViewWithSegue:" id="SLF-Mn-1Dv"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Bv7-NF-NRb">
                             <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -159,6 +163,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qr8-Eo-Eit" sceneMemberID="firstResponder"/>
+                <exit id="YUJ-6r-pGF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1632" y="126"/>
         </scene>
@@ -224,10 +229,14 @@
                     <navigationItem key="navigationItem" title="Results" id="QCC-Mj-rGe">
                         <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="x9P-1T-xTz">
                             <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="6fb-e0-ywe" kind="unwind" unwindAction="unwindToStartViewWithSegue:" id="qC3-B2-PTR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrB-Ix-wrE" sceneMemberID="firstResponder"/>
+                <exit id="6fb-e0-ywe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3112" y="126"/>
         </scene>
