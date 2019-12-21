@@ -115,42 +115,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIs-RT-oOS">
-                                <rect key="frame" x="177" y="87" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIs-RT-oOS">
+                                <rect key="frame" x="184.5" y="106" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-sU-LPc">
-                                <rect key="frame" x="151" y="116" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgU-Sn-AXc">
+                                <rect key="frame" x="182.5" y="183" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kob-JE-lCj" customClass="CurrencyTextField" customModule="Best_Guess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="212" width="414" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgU-Sn-AXc">
-                                <rect key="frame" x="175" y="178" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-sU-LPc">
+                                <rect key="frame" x="0.0" y="135" width="414" height="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kob-JE-lCj">
-                                <rect key="frame" x="151" y="207" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MIs-RT-oOS" firstAttribute="centerX" secondItem="1n5-5k-xAl" secondAttribute="centerX" id="7Bc-dj-ap2"/>
+                            <constraint firstItem="kob-JE-lCj" firstAttribute="top" secondItem="AgU-Sn-AXc" secondAttribute="bottom" constant="8" id="8FJ-sL-Zrr"/>
+                            <constraint firstItem="1n5-5k-xAl" firstAttribute="trailing" secondItem="kob-JE-lCj" secondAttribute="trailing" id="Fwd-1z-v6f"/>
+                            <constraint firstItem="4EM-sU-LPc" firstAttribute="top" secondItem="MIs-RT-oOS" secondAttribute="bottom" constant="8" id="LHD-oH-tSx"/>
+                            <constraint firstItem="AgU-Sn-AXc" firstAttribute="centerX" secondItem="1n5-5k-xAl" secondAttribute="centerX" id="Nqk-BU-npw"/>
+                            <constraint firstItem="AgU-Sn-AXc" firstAttribute="top" secondItem="4EM-sU-LPc" secondAttribute="bottom" constant="18" id="Ua2-iX-g6p"/>
+                            <constraint firstItem="MIs-RT-oOS" firstAttribute="top" secondItem="1n5-5k-xAl" secondAttribute="top" constant="18" id="gDg-ly-05L"/>
+                            <constraint firstItem="kob-JE-lCj" firstAttribute="centerX" secondItem="1n5-5k-xAl" secondAttribute="centerX" id="gOf-P2-xcp"/>
+                            <constraint firstItem="4EM-sU-LPc" firstAttribute="centerX" secondItem="1n5-5k-xAl" secondAttribute="centerX" id="gYA-gD-Ax9"/>
+                            <constraint firstItem="kob-JE-lCj" firstAttribute="leading" secondItem="1n5-5k-xAl" secondAttribute="leading" id="iFA-lh-eKs"/>
+                            <constraint firstItem="4EM-sU-LPc" firstAttribute="leading" secondItem="1n5-5k-xAl" secondAttribute="leading" id="pi1-zc-WGP"/>
+                            <constraint firstItem="1n5-5k-xAl" firstAttribute="trailing" secondItem="4EM-sU-LPc" secondAttribute="trailing" id="yD0-UJ-UZJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1n5-5k-xAl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Take A Guess" id="ti0-ev-w5v">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="dOO-XU-9Bg">
                             <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="cancelButtonAction:" destination="WqA-ml-4yK" id="BT4-E9-0cq"/>
                                 <segue destination="YUJ-6r-pGF" kind="unwind" unwindAction="unwindToStartViewWithSegue:" id="SLF-Mn-1Dv"/>
                             </connections>
                         </barButtonItem>
@@ -161,11 +172,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="guessTextField" destination="kob-JE-lCj" id="hZ5-bu-man"/>
+                        <outlet property="nameTextField" destination="4EM-sU-LPc" id="HvD-Kd-JNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qr8-Eo-Eit" sceneMemberID="firstResponder"/>
                 <exit id="YUJ-6r-pGF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="126"/>
+            <point key="canvasLocation" x="1631.8840579710147" y="125.89285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O57-65-7lc">
