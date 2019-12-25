@@ -19,6 +19,7 @@
 		8999DEC023AE4D2D00F26FBC /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEBF23AE4D2D00F26FBC /* CurrencyTextField.swift */; };
 		8999DEC323AE4E6800F26FBC /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEC223AE4E6800F26FBC /* Guess.swift */; };
 		8999DEC523B39EF400F26FBC /* GuessesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEC423B39EF400F26FBC /* GuessesTableViewCell.swift */; };
+		8999DEC723B3A5BB00F26FBC /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8999DEC623B3A5BB00F26FBC /* ResultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8999DEBF23AE4D2D00F26FBC /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		8999DEC223AE4E6800F26FBC /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		8999DEC423B39EF400F26FBC /* GuessesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessesTableViewCell.swift; sourceTree = "<group>"; };
+		8999DEC623B3A5BB00F26FBC /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				8999DEBF23AE4D2D00F26FBC /* CurrencyTextField.swift */,
 				8999DEC423B39EF400F26FBC /* GuessesTableViewCell.swift */,
+				8999DEC623B3A5BB00F26FBC /* ResultsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				8999DEB823AD2FD600F26FBC /* TakeAGuessViewController.swift in Sources */,
 				8999DEBA23AD304000F26FBC /* AnswerViewController.swift in Sources */,
 				8999DEA123AD290C00F26FBC /* AppDelegate.swift in Sources */,
+				8999DEC723B3A5BB00F26FBC /* ResultsTableViewCell.swift in Sources */,
 				8999DEC523B39EF400F26FBC /* GuessesTableViewCell.swift in Sources */,
 				8999DEA323AD290C00F26FBC /* SceneDelegate.swift in Sources */,
 				8999DEC323AE4E6800F26FBC /* Guess.swift in Sources */,

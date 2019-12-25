@@ -36,6 +36,7 @@ class AnswerViewController: UIViewController {
         if segue.destination is ResultsViewController {
             let vc = segue.destination as? ResultsViewController
             vc?.guessList = guessList
+            vc?.answer = answerTextField.value
         }
     }
 
