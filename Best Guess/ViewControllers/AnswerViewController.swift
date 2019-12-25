@@ -9,22 +9,51 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
-
+    
+    // Variables
+    var guessList: [Guess] = []
+    
+    @IBOutlet weak var answerTextField: CurrencyTextField!
+    @IBOutlet weak var guessesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        guessesTableView.delegate = self
+        guessesTableView.dataSource = self
+        
+        print(guessList)
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // Prepare for segue, send guessList to answer view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.destination is ResultsViewController {
+            let vc = segue.destination as? ResultsViewController
+            vc?.guessList = guessList
+        }
     }
-    */
 
 }
+
+// Setup guesses tableview
+extension AnswerViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return guessList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "guessCellReuseIdentifier", for: indexPath) as! GuessesTableViewCell
+        let guess = guessList[indexPath.row]
+        cell.nameLabel.text = guess.name
+        cell.amountLabel.text = Formatter.currency.string(from: NSNumber(value: guess.ammount))
+        return cell
+    }
+}
+

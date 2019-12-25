@@ -9,6 +9,8 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
+    
+    var guessList: [Guess] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

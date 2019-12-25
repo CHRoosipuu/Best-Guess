@@ -71,27 +71,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-F7-yUg">
-                                <rect key="frame" x="20" y="273" width="374" height="491"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-F7-yUg">
+                                <rect key="frame" x="20" y="191" width="374" height="651"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="guessCellReuseIdentifier" id="5Pz-49-Pju" customClass="GuessesTableViewCell" customModule="Best_Guess" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Pz-49-Pju" id="nZ8-A4-NC5">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkQ-hF-m18">
+                                                    <rect key="frame" x="274" y="10" width="80" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOH-MS-xhS">
+                                                    <rect key="frame" x="27" y="8" width="52" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.098039215690000001" green="0.1333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="bOH-MS-xhS" firstAttribute="centerY" secondItem="nZ8-A4-NC5" secondAttribute="centerY" id="2rz-Dp-4Zt"/>
+                                                <constraint firstItem="bOH-MS-xhS" firstAttribute="leading" secondItem="nZ8-A4-NC5" secondAttribute="leading" constant="20" id="bV5-yO-kkS"/>
+                                                <constraint firstItem="FkQ-hF-m18" firstAttribute="centerY" secondItem="nZ8-A4-NC5" secondAttribute="centerY" id="cke-zy-efR"/>
+                                                <constraint firstAttribute="trailing" secondItem="FkQ-hF-m18" secondAttribute="trailing" constant="20" id="h60-tx-RRF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="FkQ-hF-m18" id="CR9-eS-u1K"/>
+                                            <outlet property="nameLabel" destination="bOH-MS-xhS" id="mvP-ei-ei5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fi-r8-lzk">
-                                <rect key="frame" x="20" y="126" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIH-m2-coA">
-                                <rect key="frame" x="146" y="97" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIH-m2-coA">
+                                <rect key="frame" x="145.5" y="104" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fi-r8-lzk" customClass="CurrencyTextField" customModule="Best_Guess" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="133" width="414" height="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.27779012920000001" green="0.84019488099999995" blue="0.67332655190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uwy-aH-56r" firstAttribute="bottom" secondItem="jMF-F7-yUg" secondAttribute="bottom" constant="20" id="FPF-sb-Jj6"/>
+                            <constraint firstItem="uwy-aH-56r" firstAttribute="trailing" secondItem="jMF-F7-yUg" secondAttribute="trailing" constant="20" id="Kfk-T7-8VC"/>
+                            <constraint firstItem="FIH-m2-coA" firstAttribute="top" secondItem="uwy-aH-56r" secondAttribute="top" constant="16" id="Sle-5f-ao3"/>
+                            <constraint firstItem="7fi-r8-lzk" firstAttribute="leading" secondItem="uwy-aH-56r" secondAttribute="leading" id="W0x-s5-XGf"/>
+                            <constraint firstItem="7fi-r8-lzk" firstAttribute="top" secondItem="FIH-m2-coA" secondAttribute="bottom" constant="8" id="Yf8-PH-u2P"/>
+                            <constraint firstItem="jMF-F7-yUg" firstAttribute="top" secondItem="7fi-r8-lzk" secondAttribute="bottom" constant="16" id="elw-9a-m8k"/>
+                            <constraint firstItem="FIH-m2-coA" firstAttribute="centerX" secondItem="uwy-aH-56r" secondAttribute="centerX" id="qZV-bD-9IL"/>
+                            <constraint firstItem="jMF-F7-yUg" firstAttribute="leading" secondItem="uwy-aH-56r" secondAttribute="leading" constant="20" id="r97-kc-g3J"/>
+                            <constraint firstItem="uwy-aH-56r" firstAttribute="trailing" secondItem="7fi-r8-lzk" secondAttribute="trailing" id="wxx-ZY-KFb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uwy-aH-56r"/>
                     </view>
                     <navigationItem key="navigationItem" title="Answer" id="HSN-qP-jhi">
@@ -102,10 +146,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="7fi-r8-lzk" id="cnV-qR-Nf3"/>
+                        <outlet property="guessesTableView" destination="jMF-F7-yUg" id="ueZ-93-ri6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFI-Yi-Wz2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="126"/>
+            <point key="canvasLocation" x="2373.913043478261" y="125.89285714285714"/>
         </scene>
         <!--Take A Guess-->
         <scene sceneID="VXY-Vy-S1m">
