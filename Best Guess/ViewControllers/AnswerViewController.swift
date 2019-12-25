@@ -22,10 +22,9 @@ class AnswerViewController: UIViewController {
         
         guessesTableView.delegate = self
         guessesTableView.dataSource = self
-        
-        print(guessList)
 
         // Do any additional setup after loading the view.
+        
     }
     
 
