@@ -25,6 +25,9 @@ class AnswerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // answerTextField
+        answerTextField.becomeFirstResponder()
+        
     }
     
 

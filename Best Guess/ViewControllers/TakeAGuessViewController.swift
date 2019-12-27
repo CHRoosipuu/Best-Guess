@@ -14,6 +14,7 @@ class TakeAGuessViewController: UIViewController {
     var guessList: [Guess] = []
     
     // IBOutlets
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var guessTextField: CurrencyTextField!
     
@@ -22,6 +23,10 @@ class TakeAGuessViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Disable Done button
+        doneButton.isEnabled = false
+        
         // Create Save Guess button for keyboard
         let saveGuessButton: UIButton = UIButton(type: UIButton.ButtonType.system)
         saveGuessButton.setTitle("Save Guess", for: .normal)
@@ -48,7 +53,8 @@ class TakeAGuessViewController: UIViewController {
     
     // Save guess to guessList and reset the text fields for next guess
     @objc func saveGuess() {
-        guessList.append(Guess(name: nameTextField.text ?? "Anonymous", ammount: Float(guessTextField.value) ))
+        guessList.append(Guess(name: nameTextField.text ?? "Anonymous", ammount: Float(guessTextField.value)))
+        doneButton.isEnabled = true
         resetGuess()
     }
     
