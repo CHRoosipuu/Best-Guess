@@ -27,6 +27,22 @@ class TakeAGuessViewController: UIViewController {
         // Disable Done button
         doneButton.isEnabled = false
         
+        // Create next button for keyboard
+        let nextButton: UIButton = UIButton(type: UIButton.ButtonType.system)
+        nextButton.setTitle("Next", for: .normal)
+        nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 28)
+        nextButton.autoresizesSubviews = true
+        nextButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+        nextButton.addTarget(self, action: #selector(moveToGuess), for: .touchUpInside)
+        
+        // Create toolbar for keyboard and next button
+        let nameTextFieldToolBar = UIToolbar()
+        nameTextFieldToolBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 75)
+        nameTextFieldToolBar.tintColor = UIColor.white
+        nameTextFieldToolBar.barTintColor = UIColor(red: 0, green: 0.839, blue: 0.678, alpha: 1)
+        nameTextFieldToolBar.setItems([UIBarButtonItem.init(customView: nextButton)], animated: false)
+        nameTextField.inputAccessoryView = nameTextFieldToolBar
+        
         // Create Save Guess button for keyboard
         let saveGuessButton: UIButton = UIButton(type: UIButton.ButtonType.system)
         saveGuessButton.setTitle("Save Guess", for: .normal)
@@ -36,12 +52,12 @@ class TakeAGuessViewController: UIViewController {
         saveGuessButton.addTarget(self, action: #selector(saveGuess), for: .touchUpInside)
         
         // Create toolbar for keyboard and save guess button
-        let amountKeyboardToolBar = UIToolbar()
-        amountKeyboardToolBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 75)
-        amountKeyboardToolBar.tintColor = UIColor.white
-        amountKeyboardToolBar.barTintColor = UIColor(red: 0, green: 0.839, blue: 0.678, alpha: 1)
-        amountKeyboardToolBar.setItems([UIBarButtonItem.init(customView: saveGuessButton)], animated: false)
-        guessTextField.inputAccessoryView = amountKeyboardToolBar
+        let guessTextFieldToolBar = UIToolbar()
+        guessTextFieldToolBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 75)
+        guessTextFieldToolBar.tintColor = UIColor.white
+        guessTextFieldToolBar.barTintColor = UIColor(red: 0, green: 0.839, blue: 0.678, alpha: 1)
+        guessTextFieldToolBar.setItems([UIBarButtonItem.init(customView: saveGuessButton)], animated: false)
+        guessTextField.inputAccessoryView = guessTextFieldToolBar
         
         // Name text field
         nameTextField.becomeFirstResponder()
@@ -49,6 +65,11 @@ class TakeAGuessViewController: UIViewController {
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Enter Name",
                                                                  attributes: [NSAttributedString.Key.foregroundColor:
                                                                     UIColor(red: 0.5725, green: 0.6039, blue: 0.6824, alpha: 1)])
+    }
+
+    // Save guess to guessList and reset the text fields for next guess
+    @objc func moveToGuess() {
+        guessTextField.becomeFirstResponder()
     }
     
     // Save guess to guessList and reset the text fields for next guess
