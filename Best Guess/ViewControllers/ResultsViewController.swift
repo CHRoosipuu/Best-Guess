@@ -14,6 +14,7 @@ class ResultsViewController: UIViewController {
     var answer: Float = 0
     
     
+    @IBOutlet weak var correctAmountLabel: UILabel!
     @IBOutlet weak var winnerNameLabel: UILabel!
     @IBOutlet weak var winnerGuessLabel: UILabel!
     @IBOutlet weak var winnerDiffrenceLabel: UILabel!
@@ -26,13 +27,17 @@ class ResultsViewController: UIViewController {
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
         
+        correctAmountLabel.text = Formatter.currency.string(from: NSNumber(value: answer))
+        
         guessList.sort { (this: Guess, other: Guess) -> Bool in
             return abs(this.ammount - answer) < abs(other.ammount - answer)
         }
 
+        // Set winner label and guess
         winnerNameLabel.text = guessList[0].name
         winnerGuessLabel.text = Formatter.currency.string(from: NSNumber(value: guessList[0].ammount))
         
+        // Format winner diffrence label
         let winnerGuessDiffrence = guessList[0].ammount - answer
         
         if (winnerGuessDiffrence < 0) {
