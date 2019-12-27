@@ -14,6 +14,7 @@ class AnswerViewController: UIViewController {
     var guessList: [Guess] = []
     
     @IBOutlet weak var answerTextField: CurrencyTextField!
+    @IBOutlet weak var avgGuessLabel: UILabel!
     @IBOutlet weak var guessesTableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,6 +23,12 @@ class AnswerViewController: UIViewController {
         
         guessesTableView.delegate = self
         guessesTableView.dataSource = self
+        
+        let guessSum = guessList.reduce(0, {x, y in
+            x + y.ammount})
+        let avgGuess = guessSum / Float(guessList.count)
+        
+        avgGuessLabel.text! += Formatter.currency.string(from: NSNumber(value: avgGuess))!
 
         // Do any additional setup after loading the view.
         
