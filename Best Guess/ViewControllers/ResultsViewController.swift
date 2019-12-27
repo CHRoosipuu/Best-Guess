@@ -62,12 +62,12 @@ class ResultsViewController: UIViewController {
 extension ResultsViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return guessList.count
+        return guessList.count - 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultsCellReuseIdentifier", for: indexPath) as! ResultsTableViewCell
-        let guess = guessList[indexPath.row]
+        let guess = guessList[indexPath.row + 1]
         cell.nameLabel.text = String(indexPath.row + 2) + ".    " + guess.name
         cell.amountLabel.text = Formatter.currency.string(from: NSNumber(value: guess.ammount))
         
