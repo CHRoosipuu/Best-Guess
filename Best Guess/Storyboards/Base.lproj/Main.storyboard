@@ -16,10 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best_guess_icon_nobg" translatesAutoresizingMaskIntoConstraints="NO" id="6ka-hK-SVP">
-                                <rect key="frame" x="157" y="44" width="100" height="100"/>
+                                <rect key="frame" x="75" y="44" width="264" height="264"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2ov-q3-hdH"/>
-                                    <constraint firstAttribute="width" constant="100" id="fmb-Lw-GWa"/>
+                                    <constraint firstAttribute="width" secondItem="6ka-hK-SVP" secondAttribute="height" multiplier="1:1" id="MDB-Go-tqY"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Lq-4am">
@@ -38,7 +37,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a guess and pass it on!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mif-jB-is2">
-                                <rect key="frame" x="96.5" y="206" width="221" height="21"/>
+                                <rect key="frame" x="96.5" y="328" width="221" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,9 +47,12 @@
                         <constraints>
                             <constraint firstItem="Urd-Lq-4am" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-1" id="7jb-MB-x8Z"/>
                             <constraint firstItem="Urd-Lq-4am" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-9.5" id="Bhn-wC-bWV"/>
-                            <constraint firstItem="mif-jB-is2" firstAttribute="top" secondItem="6ka-hK-SVP" secondAttribute="bottom" constant="62" id="Ifp-R7-nGx"/>
+                            <constraint firstItem="6ka-hK-SVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="EzV-ju-HrA"/>
+                            <constraint firstItem="mif-jB-is2" firstAttribute="top" secondItem="6ka-hK-SVP" secondAttribute="bottom" constant="20" id="Ifp-R7-nGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ka-hK-SVP" secondAttribute="trailing" constant="75" id="QSm-O1-Nbd"/>
                             <constraint firstItem="6ka-hK-SVP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aBB-oA-6tM"/>
                             <constraint firstItem="6ka-hK-SVP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jh5-Yy-mRH"/>
+                            <constraint firstItem="Urd-Lq-4am" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mif-jB-is2" secondAttribute="bottom" constant="20" id="ujS-R8-TYz"/>
                             <constraint firstItem="mif-jB-is2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zye-TU-68L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
